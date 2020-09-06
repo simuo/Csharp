@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Csharp\OperatorsApp09\OperatorsApp09\bin\Debug\OperatorsApp09.exe
+E:\Learning\c#\Project\Csharp\OperatorsApp09\OperatorsApp09\bin\Debug\OperatorsApp09.pdb
+E:\Learning\c#\Project\Csharp\OperatorsApp09\OperatorsApp09\obj\Debug\OperatorsApp09.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Csharp\OperatorsApp09\OperatorsApp09\obj\Debug\OperatorsApp09.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Csharp\OperatorsApp09\OperatorsApp09\obj\Debug\OperatorsApp09.exe
+E:\Learning\c#\Project\Csharp\OperatorsApp09\OperatorsApp09\obj\Debug\OperatorsApp09.pdb

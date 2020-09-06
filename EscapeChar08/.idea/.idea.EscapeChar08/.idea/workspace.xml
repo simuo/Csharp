@@ -22,8 +22,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="67247c08-6aa6-42bc-8586-0e21f9313ccc" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../VariableDefination/.idea/.idea.VariableDefination/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../VariableDefination/.idea/.idea.VariableDefination/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="67247c08-6aa6-42bc-8586-0e21f9313ccc" name="Default Changelist" comment="add const,etc.">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.EscapeChar08/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.EscapeChar08/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EscapeChar08/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/EscapeChar08/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EscapeChar08/bin/Debug/EscapeChar08.exe" beforeDir="false" afterPath="$PROJECT_DIR$/EscapeChar08/bin/Debug/EscapeChar08.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EscapeChar08/bin/Debug/EscapeChar08.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EscapeChar08/bin/Debug/EscapeChar08.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EscapeChar08/obj/Debug/EscapeChar08.exe" beforeDir="false" afterPath="$PROJECT_DIR$/EscapeChar08/obj/Debug/EscapeChar08.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/EscapeChar08/obj/Debug/EscapeChar08.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/EscapeChar08/obj/Debug/EscapeChar08.pdb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,8 +83,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599409821228</updated>
-      <workItem from="1599409822919" duration="460000" />
+      <workItem from="1599409822919" duration="898000" />
     </task>
+    <task id="LOCAL-00001" summary="add const,etc.">
+      <created>1599410460033</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599410460033</updated>
+    </task>
+    <task id="LOCAL-00002" summary="add const,etc.">
+      <created>1599410468038</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599410468038</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -100,11 +120,33 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="add const,etc." />
+    <option name="LAST_COMMIT_MESSAGE" value="add const,etc." />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1599410723240">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599410723240" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1599410723240">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599410723240" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1599410723239">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599410723239" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1599410723240">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599410723240" />
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size" timestamp="1599409821290">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1599409821290" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1599410472685">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599410472685" />
   </component>
 </project>

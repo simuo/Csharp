@@ -34,5 +34,6 @@ public class ConstTest
         SampleClass mc=new SampleClass(11,22);
         Console.WriteLine("x={0},y={1}",mc.x,mc.y);
         Console.WriteLine("c1={0},c2={1}",SampleClass.c1,SampleClass.c2);
+        Console.ReadKey();
     }
 }
