@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Rectangle02\Rectangle02\bin\Debug\Rectangle02.exe
+E:\Learning\c#\Project\Rectangle02\Rectangle02\bin\Debug\Rectangle02.pdb
+E:\Learning\c#\Project\Rectangle02\Rectangle02\obj\Debug\Rectangle02.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Rectangle02\Rectangle02\obj\Debug\Rectangle02.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Rectangle02\Rectangle02\obj\Debug\Rectangle02.exe
+E:\Learning\c#\Project\Rectangle02\Rectangle02\obj\Debug\Rectangle02.pdb

@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\GetDatatypeApplication\GetDatatypeApplication\bin\Debug\GetDatatypeApplication.exe
+E:\Learning\c#\Project\GetDatatypeApplication\GetDatatypeApplication\bin\Debug\GetDatatypeApplication.pdb
+E:\Learning\c#\Project\GetDatatypeApplication\GetDatatypeApplication\obj\Debug\GetDatatypeApplication.csprojAssemblyReference.cache
+E:\Learning\c#\Project\GetDatatypeApplication\GetDatatypeApplication\obj\Debug\GetDatatypeApplication.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\GetDatatypeApplication\GetDatatypeApplication\obj\Debug\GetDatatypeApplication.exe
+E:\Learning\c#\Project\GetDatatypeApplication\GetDatatypeApplication\obj\Debug\GetDatatypeApplication.pdb

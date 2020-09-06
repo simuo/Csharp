@@ -28,7 +28,83 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bafdef60-af4a-43b1-a3d1-cb0ae0ab31cb" name="Default Changelist" comment="" />
+    <list default="true" id="bafdef60-af4a-43b1-a3d1-cb0ae0ab31cb" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/FirstDemo/.idea/.idea.FirstDemo/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/.idea/.idea.FirstDemo/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/.idea/.idea.FirstDemo/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/.idea/.idea.FirstDemo/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/.idea/.idea.FirstDemo/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/.idea/.idea.FirstDemo/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/FirstDemo.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/MyFirstDemo01.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/bin/Debug/netcoreapp3.1/MyFirstDemo01.deps.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/bin/Debug/netcoreapp3.1/MyFirstDemo01.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/bin/Debug/netcoreapp3.1/MyFirstDemo01.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/bin/Debug/netcoreapp3.1/MyFirstDemo01.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/bin/Debug/netcoreapp3.1/MyFirstDemo01.runtimeconfig.dev.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/bin/Debug/netcoreapp3.1/MyFirstDemo01.runtimeconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/.NETCoreApp,Version=v3.1.AssemblyAttributes.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.AssemblyInfoInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.assets.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.dll" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.genruntimeconfig.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/Debug/netcoreapp3.1/MyFirstDemo01.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/MyFirstDemo01.csproj.nuget.dgspec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/MyFirstDemo01.csproj.nuget.g.props" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/MyFirstDemo01.csproj.nuget.g.targets" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/project.assets.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/project.nuget.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/project.packagespec.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FirstDemo/obj/rider.project.restore.info" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/.idea/.idea.GetDatatypeApplication/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/.idea/.idea.GetDatatypeApplication/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/.idea/.idea.GetDatatypeApplication/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/.idea/.idea.GetDatatypeApplication/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/.idea/.idea.GetDatatypeApplication/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/.idea/.idea.GetDatatypeApplication/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/GetDatatypeApplication.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/bin/Debug/GetDatatypeApplication.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/bin/Debug/GetDatatypeApplication.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/GetDatatypeApplication.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/GetDatatypeApplication.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/GetDatatypeApplication.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/GetDatatypeApplication.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/GetDatatypeApplication.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GetDatatypeApplication/GetDatatypeApplication/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/HelloWorldApplication/.idea/.idea.HelloWorldApplication/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/.idea/.idea.Rectangle02/.idea/contentModel.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/.idea/.idea.Rectangle02/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/.idea/.idea.Rectangle02/.idea/indexLayout.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/.idea/.idea.Rectangle02/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/.idea/.idea.Rectangle02/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/.idea/.idea.Rectangle02/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/Program.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/Properties/AssemblyInfo.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/Rectangle02.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/bin/Debug/Rectangle02.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/bin/Debug/Rectangle02.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/Rectangle02.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/Rectangle02.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/Rectangle02.csprojAssemblyReference.cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/Rectangle02.exe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/Rectangle02.pdb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rectangle02/Rectangle02/obj/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Csharp.dir/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Csharp.dir/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,6 +112,10 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/01HelloWorldApplication/HelloWorldApplication/HelloWorldApplication.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/01HelloWorldApplication/HelloWorldApplication/Properties/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -76,6 +156,24 @@
         <option name="Build" projectName="Selected project" />
       </method>
     </configuration>
+    <configuration name="test" type="DotNetProject" factoryName=".NET Project">
+      <option name="EXE_PATH" value="" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <option name="USE_MONO" value="0" />
+      <option name="RUNTIME_ARGUMENTS" value="" />
+      <option name="PROJECT_PATH" value="" />
+      <option name="PROJECT_EXE_PATH_TRACKING" value="1" />
+      <option name="PROJECT_ARGUMENTS_TRACKING" value="1" />
+      <option name="PROJECT_WORKING_DIRECTORY_TRACKING" value="1" />
+      <option name="PROJECT_KIND" value="None" />
+      <option name="PROJECT_TFM" value="" />
+      <method v="2">
+        <option name="Build" projectName="Selected project" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -88,6 +186,7 @@
       <workItem from="1599196468899" duration="1022000" />
       <workItem from="1599273449102" duration="1290000" />
       <workItem from="1599274874521" duration="89000" />
+      <workItem from="1599399512798" duration="272000" />
     </task>
     <servers />
   </component>
@@ -130,10 +229,10 @@
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="345" y="62" key="#Inspection_severity/0.0.1536.834@0.0.1536.834" timestamp="1599196882093" />
-    <state x="223" y="72" width="1089" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599274469741">
+    <state x="223" y="45" width="1089" height="789" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1599399764530">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="223" y="72" width="1089" height="739" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1599274469741" />
+    <state x="223" y="45" width="1089" height="789" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.834@0.0.1536.834" timestamp="1599399764530" />
     <state x="274" y="56" key="SettingsEditor" timestamp="1599274703365">
       <screen x="0" y="0" width="1536" height="834" />
     </state>

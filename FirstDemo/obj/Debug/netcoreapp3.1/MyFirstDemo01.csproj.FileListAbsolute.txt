@@ -1,0 +1,13 @@
+E:\Learning\c#\Project\FirstDemo\bin\Debug\netcoreapp3.1\MyFirstDemo01.exe
+E:\Learning\c#\Project\FirstDemo\bin\Debug\netcoreapp3.1\MyFirstDemo01.deps.json
+E:\Learning\c#\Project\FirstDemo\bin\Debug\netcoreapp3.1\MyFirstDemo01.runtimeconfig.json
+E:\Learning\c#\Project\FirstDemo\bin\Debug\netcoreapp3.1\MyFirstDemo01.runtimeconfig.dev.json
+E:\Learning\c#\Project\FirstDemo\bin\Debug\netcoreapp3.1\MyFirstDemo01.dll
+E:\Learning\c#\Project\FirstDemo\bin\Debug\netcoreapp3.1\MyFirstDemo01.pdb
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.csprojAssemblyReference.cache
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.AssemblyInfoInputs.cache
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.AssemblyInfo.cs
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.dll
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.pdb
+E:\Learning\c#\Project\FirstDemo\obj\Debug\netcoreapp3.1\MyFirstDemo01.genruntimeconfig.cache
