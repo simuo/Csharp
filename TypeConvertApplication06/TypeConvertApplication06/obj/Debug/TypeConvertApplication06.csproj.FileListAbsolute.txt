@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Csharp\TypeConvertApplication06\TypeConvertApplication06\bin\Debug\TypeConvertApplication06.exe
+E:\Learning\c#\Project\Csharp\TypeConvertApplication06\TypeConvertApplication06\bin\Debug\TypeConvertApplication06.pdb
+E:\Learning\c#\Project\Csharp\TypeConvertApplication06\TypeConvertApplication06\obj\Debug\TypeConvertApplication06.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Csharp\TypeConvertApplication06\TypeConvertApplication06\obj\Debug\TypeConvertApplication06.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Csharp\TypeConvertApplication06\TypeConvertApplication06\obj\Debug\TypeConvertApplication06.exe
+E:\Learning\c#\Project\Csharp\TypeConvertApplication06\TypeConvertApplication06\obj\Debug\TypeConvertApplication06.pdb
