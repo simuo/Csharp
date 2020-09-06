@@ -29,7 +29,14 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="21500383-c6d4-4f5d-b243-edcb2c9c18b1" name="Default Changelist" comment="add typeconvert" />
+    <list default="true" id="21500383-c6d4-4f5d-b243-edcb2c9c18b1" name="Default Changelist" comment="add typeconvert111">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TypeConvertApplication06/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TypeConvertApplication06/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TypeConvertApplication06/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TypeConvertApplication06/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TypeConvertApplication06/bin/Debug/TypeConvertApplication06.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TypeConvertApplication06/bin/Debug/TypeConvertApplication06.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TypeConvertApplication06/bin/Debug/TypeConvertApplication06.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TypeConvertApplication06/bin/Debug/TypeConvertApplication06.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TypeConvertApplication06/obj/Debug/TypeConvertApplication06.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TypeConvertApplication06/obj/Debug/TypeConvertApplication06.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TypeConvertApplication06/obj/Debug/TypeConvertApplication06.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TypeConvertApplication06/obj/Debug/TypeConvertApplication06.pdb" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +90,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599400587679</updated>
-      <workItem from="1599400594930" duration="1163000" />
+      <workItem from="1599400594930" duration="3393000" />
     </task>
     <task id="LOCAL-00001" summary="add typeconvert">
       <created>1599401288154</created>
@@ -92,7 +99,14 @@
       <option name="project" value="LOCAL" />
       <updated>1599401288154</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add typeconvert111">
+      <created>1599401776621</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1599401776621</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -126,33 +140,34 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="add typeconvert" />
-    <option name="LAST_COMMIT_MESSAGE" value="add typeconvert" />
+    <MESSAGE value="add typeconvert111" />
+    <option name="LAST_COMMIT_MESSAGE" value="add typeconvert111" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1599401556411">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom" timestamp="1599405672777">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599401556411" />
-    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1599401556410">
+    <state width="1493" height="213" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599405672777" />
+    <state width="1493" height="213" key="GridCell.Tab.0.center" timestamp="1599405672777">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599401556410" />
-    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1599401556410">
+    <state width="1493" height="213" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599405672777" />
+    <state width="1493" height="213" key="GridCell.Tab.0.left" timestamp="1599405672776">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599401556410" />
-    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1599401556410">
+    <state width="1493" height="213" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599405672776" />
+    <state width="1493" height="213" key="GridCell.Tab.0.right" timestamp="1599405672777">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599401556410" />
-    <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size" timestamp="1599400587778">
+    <state width="1493" height="213" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599405672777" />
+    <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size" timestamp="1599405391283">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1599400587778" />
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1599401484483">
+    <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1599405391283" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1599401782144">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
-    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599401484483" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599401782144" />
     <state x="573" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1599401473079">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
