@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Csharp\DecisionMaking\DecisionMaking\bin\Debug\DecisionMaking.exe
+E:\Learning\c#\Project\Csharp\DecisionMaking\DecisionMaking\bin\Debug\DecisionMaking.pdb
+E:\Learning\c#\Project\Csharp\DecisionMaking\DecisionMaking\obj\Debug\DecisionMaking.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Csharp\DecisionMaking\DecisionMaking\obj\Debug\DecisionMaking.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Csharp\DecisionMaking\DecisionMaking\obj\Debug\DecisionMaking.exe
+E:\Learning\c#\Project\Csharp\DecisionMaking\DecisionMaking\obj\Debug\DecisionMaking.pdb
