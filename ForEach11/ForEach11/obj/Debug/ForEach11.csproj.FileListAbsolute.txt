@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Csharp\ForEach11\ForEach11\bin\Debug\ForEach11.exe
+E:\Learning\c#\Project\Csharp\ForEach11\ForEach11\bin\Debug\ForEach11.pdb
+E:\Learning\c#\Project\Csharp\ForEach11\ForEach11\obj\Debug\ForEach11.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Csharp\ForEach11\ForEach11\obj\Debug\ForEach11.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Csharp\ForEach11\ForEach11\obj\Debug\ForEach11.exe
+E:\Learning\c#\Project\Csharp\ForEach11\ForEach11\obj\Debug\ForEach11.pdb
