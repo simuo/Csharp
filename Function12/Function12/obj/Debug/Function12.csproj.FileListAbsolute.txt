@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Csharp\Function12\Function12\bin\Debug\Function12.exe
+E:\Learning\c#\Project\Csharp\Function12\Function12\bin\Debug\Function12.pdb
+E:\Learning\c#\Project\Csharp\Function12\Function12\obj\Debug\Function12.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Csharp\Function12\Function12\obj\Debug\Function12.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Csharp\Function12\Function12\obj\Debug\Function12.exe
+E:\Learning\c#\Project\Csharp\Function12\Function12\obj\Debug\Function12.pdb

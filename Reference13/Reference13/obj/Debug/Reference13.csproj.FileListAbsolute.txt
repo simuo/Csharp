@@ -1,0 +1,6 @@
+E:\Learning\c#\Project\Csharp\Reference13\Reference13\bin\Debug\Reference13.exe
+E:\Learning\c#\Project\Csharp\Reference13\Reference13\bin\Debug\Reference13.pdb
+E:\Learning\c#\Project\Csharp\Reference13\Reference13\obj\Debug\Reference13.csprojAssemblyReference.cache
+E:\Learning\c#\Project\Csharp\Reference13\Reference13\obj\Debug\Reference13.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\Csharp\Reference13\Reference13\obj\Debug\Reference13.exe
+E:\Learning\c#\Project\Csharp\Reference13\Reference13\obj\Debug\Reference13.pdb
