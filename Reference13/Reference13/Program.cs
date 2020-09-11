@@ -16,7 +16,6 @@ namespace Reference13
             p.getValues(out a,out b);
             Console.WriteLine(a);
             Console.WriteLine(b);
-            
         }
     }
 }

@@ -22,8 +22,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5e55844a-fd8f-4b28-bdf9-8a24826cf886" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../ForEach11/.idea/.idea.ForEach11/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ForEach11/.idea/.idea.ForEach11/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="5e55844a-fd8f-4b28-bdf9-8a24826cf886" name="Default Changelist" comment="add reference">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Reference13/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Reference13/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Reference13/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Reference13/Program.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,6 +33,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Function12/Function12/Properties/AssemblyInfo.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -78,14 +82,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1599523715367</updated>
-      <workItem from="1599523719164" duration="326000" />
+      <workItem from="1599523719164" duration="670000" />
+      <workItem from="1599588962086" duration="593000" />
     </task>
+    <task id="LOCAL-00001" summary="add reference">
+      <created>1599524143836</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1599524143836</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -97,14 +110,37 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="add reference" />
+    <option name="LAST_COMMIT_MESSAGE" value="add reference" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1493" height="209" key="GridCell.Tab.0.bottom" timestamp="1599524390376">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="209" key="GridCell.Tab.0.bottom/0.0.1536.834@0.0.1536.834" timestamp="1599524390376" />
+    <state width="1493" height="209" key="GridCell.Tab.0.center" timestamp="1599524390376">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="209" key="GridCell.Tab.0.center/0.0.1536.834@0.0.1536.834" timestamp="1599524390376" />
+    <state width="1493" height="209" key="GridCell.Tab.0.left" timestamp="1599524390376">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="209" key="GridCell.Tab.0.left/0.0.1536.834@0.0.1536.834" timestamp="1599524390376" />
+    <state width="1493" height="209" key="GridCell.Tab.0.right" timestamp="1599524390376">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state width="1493" height="209" key="GridCell.Tab.0.right/0.0.1536.834@0.0.1536.834" timestamp="1599524390376" />
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size" timestamp="1599523715360">
       <screen x="0" y="0" width="1536" height="834" />
     </state>
     <state x="361" y="149" key="Rider.ProjectTemplateDialog.Size/0.0.1536.834@0.0.1536.834" timestamp="1599523715360" />
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2" timestamp="1599524148310">
+      <screen x="0" y="0" width="1536" height="834" />
+    </state>
+    <state x="361" y="150" key="Vcs.Push.Dialog.v2/0.0.1536.834@0.0.1536.834" timestamp="1599524148310" />
   </component>
 </project>
