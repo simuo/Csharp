@@ -1,0 +1,149 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>xxw.Logs</name>
+    </assembly>
+    <members>
+        <member name="P:xxw.Logs.LogConfig.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:xxw.Logs.LogConfig.File">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:xxw.Logs.LogConfigModel.Log">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:xxw.Logs.LogHelper">
+            <summary>
+            日志帮助类
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Info(xxw.Logs.ILogType,System.String,System.Exception)">
+            <summary>
+            信息日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Info(xxw.Logs.ILogType,System.String)">
+            <summary>
+            信息日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Info(xxw.Logs.ILogType,System.Exception)">
+            <summary>
+            信息日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Error(xxw.Logs.ILogType,System.String,System.Exception)">
+            <summary>
+            错误日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Error(xxw.Logs.ILogType,System.String)">
+            <summary>
+            错误日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Error(xxw.Logs.ILogType,System.Exception)">
+            <summary>
+            错误日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Debug(xxw.Logs.ILogType,System.String,System.Exception)">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Debug(xxw.Logs.ILogType,System.String)">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Debug(xxw.Logs.ILogType,System.Exception)">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Fatal(xxw.Logs.ILogType,System.String,System.Exception)">
+            <summary>
+            崩溃日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Fatal(xxw.Logs.ILogType,System.String)">
+            <summary>
+            崩溃日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Fatal(xxw.Logs.ILogType,System.Exception)">
+            <summary>
+            崩溃日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Warn(xxw.Logs.ILogType,System.String,System.Exception)">
+            <summary>
+            警告日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Warn(xxw.Logs.ILogType,System.String)">
+            <summary>
+            警告日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Warn(xxw.Logs.ILogType,System.Exception)">
+            <summary>
+            警告日志
+            </summary>
+        </member>
+        <member name="M:xxw.Logs.LogHelper.Init(xxw.Logs.ILogType[])">
+            <summary>
+            初始化Log组件
+            </summary>
+            <param name="types"></param>
+        </member>
+        <member name="T:xxw.Logs.ILogType">
+            <summary>
+            日志类型接口
+            </summary>
+        </member>
+        <member name="P:xxw.Logs.ILogType.LogName">
+            <summary>
+            日志名称
+            </summary>
+        </member>
+        <member name="T:xxw.Logs.LogInfo">
+            <summary>
+            信息日志
+            </summary>
+        </member>
+        <member name="P:xxw.Logs.LogInfo.LogName">
+            <summary>
+            日志名称
+            </summary>
+        </member>
+        <member name="T:xxw.Logs.LogError">
+            <summary>
+            错误日志
+            </summary>
+        </member>
+        <member name="P:xxw.Logs.LogError.LogName">
+            <summary>
+            日志名称
+            </summary>
+        </member>
+        <member name="T:xxw.Logs.LogDebug">
+            <summary>
+            调试日志
+            </summary>
+        </member>
+        <member name="P:xxw.Logs.LogDebug.LogName">
+            <summary>
+            日志名称
+            </summary>
+        </member>
+    </members>
+</doc>

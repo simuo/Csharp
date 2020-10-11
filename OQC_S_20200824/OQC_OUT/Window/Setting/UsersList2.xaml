@@ -1,0 +1,57 @@
+﻿<Window x:Class="OQC_OUT.UsersList2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OQC_OUT" xmlns:controls="clr-namespace:OQC_OUT.Controls"
+        mc:Ignorable="d"
+        Title="检测员管理" Height="554.502" Width="1066.588" WindowStartupLocation="CenterScreen" Icon="/OQC_OUT;component/logo.ico" ShowInTaskbar="False" WindowState="Maximized">
+    <Grid FocusManager.FocusedElement="{Binding ElementName=AddInput}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="48"/>
+        </Grid.RowDefinitions>
+        <controls:BusyIndicator x:Name="Loading"/>
+        <Grid>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="5">
+                <Button Content="员工基本信息导入" Command="{Binding ImportCommand}" Margin="5,0,10,0" Padding="10,0"/>
+                <Button Content="下载导入模版" Command="{Binding ImportTempCommand}" Margin="0,0,10,0" Padding="3,0" FontStyle="Italic" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="#FF52A1F7"/>
+
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="5,5,15,5">
+                <TextBlock Text="当前班别：" VerticalAlignment="Center"/>
+                <TextBlock Text="{Binding NowClasses}" FontSize="16" FontWeight="Bold" Foreground="DarkRed" VerticalAlignment="Center" />
+            </StackPanel>
+        </Grid>
+        <ItemsControl Grid.Row="1" ItemsSource="{Binding Stations}">
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid Margin="5" Columns="{Binding ColumnsNum}" Rows="2"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <DockPanel Margin="5">
+                        <TextBlock DockPanel.Dock="Top" Text="{Binding StationName}" HorizontalAlignment="Center"/>
+                        <TextBlock DockPanel.Dock="Top" Text="{Binding StationCheck}" HorizontalAlignment="Center"/>
+                        <DataGrid AutoGenerateColumns="False" Tag="{Binding Index}" SelectionUnit="Cell" Margin="0" ItemsSource="{Binding Users}" 
+                                  PreviewKeyDown="DataGrid_PreviewKeyDown" 
+                                  GotFocus="DataGrid_GotFocus"
+                                  BeginningEdit="DataGrid_BeginningEdit"
+                                  CanUserAddRows="False"
+                                  CanUserDeleteRows="False">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Binding="{Binding UserNumber}" Width=".25*" Header="工号" />
+                                <DataGridTextColumn IsReadOnly="True" Binding="{Binding UserName}" Width=".25*" Header="姓名" />
+                                <DataGridTextColumn Binding="{Binding UserCode}" Width=".25*" Header="代码" />
+                                <DataGridTextColumn IsReadOnly="True" Binding="{Binding SeatingCode}" Width=".25*" Header="座位号" />
+                            </DataGrid.Columns>
+                        </DataGrid>
+                    </DockPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
+        <Button Command="{Binding SaveCommand}" Grid.Row="2" HorizontalAlignment="Right" Width="80" Height="28" Margin="10" Content="保存"/>
+    </Grid>
+</Window>

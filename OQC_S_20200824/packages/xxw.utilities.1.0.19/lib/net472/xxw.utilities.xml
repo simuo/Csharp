@@ -1,0 +1,999 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>xxw.utilities</name>
+    </assembly>
+    <members>
+        <member name="T:xxw.utilities.BaseModel">
+            <summary>
+            MVVM Model基类
+            </summary>
+        </member>
+        <member name="E:xxw.utilities.BaseModel.PropertyChanged">
+            <summary>
+            属性改变事件
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.BaseModel.OnPropertyChanged(System.String)">
+            <summary>
+            通知属性改变
+            </summary>
+            <param name="propertyName"></param>
+        </member>
+        <member name="M:xxw.utilities.BaseModel.OnPropertyChanged(System.String[])">
+            <summary>
+            通知属性改变
+            </summary>
+            <param name="propertyNames"></param>
+        </member>
+        <member name="T:xxw.utilities.Core.CoordinationStatus">
+            <summary>
+            线程的协调逻辑状态
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.CoordinationStatus.AllDone">
+            <summary>
+            所有项完成
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.CoordinationStatus.Timeout">
+            <summary>
+            超时
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.CoordinationStatus.Cancel">
+            <summary>
+            任务取消
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.AsyncCoordinator">
+            <summary>
+            一个线程协调逻辑类，详细参考书籍《CLR Via C#》page:681
+            这个类可惜没有报告进度的功能
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.AboutToBegin(System.Int32)">
+            <summary>
+            每次的操作任务开始前必须调用该方法
+            </summary>
+            <param name="opsToAdd"></param>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.JustEnded">
+            <summary>
+            在一次任务处理好操作之后，必须调用该方法
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.AllBegun(System.Action{xxw.utilities.Core.CoordinationStatus},System.Int32)">
+            <summary>
+            该方法必须在发起所有的操作之后调用
+            </summary>
+            <param name="callback">回调方法</param>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.TimeExpired(System.Object)">
+            <summary>
+            超时的方法
+            </summary>
+            <param name="o"></param>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.Cancel">
+            <summary>
+            取消任务的执行
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.ReportStatus(xxw.utilities.Core.CoordinationStatus)">
+            <summary>
+            生成一次报告
+            </summary>
+            <param name="status">报告的状态</param>
+        </member>
+        <member name="M:xxw.utilities.Core.AsyncCoordinator.Maxinum(System.Int32@,System.Func{System.Int32,System.Int32})">
+            <summary>
+            乐观的并发方法模型，具体参照《CLR Via C#》page:686
+            </summary>
+            <param name="target">唯一的目标数据</param>
+            <param name="change">修改数据的算法</param>
+            <returns></returns>
+        </member>
+        <member name="T:xxw.utilities.Core.HslAsyncCoordinator">
+            <summary>
+            一个用于高性能，乐观并发模型控制操作的类，允许一个方法(隔离方法)的安全单次执行
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.HslAsyncCoordinator.#ctor(System.Action)">
+            <summary>
+            实例化一个对象，需要传入隔离执行的方法
+            </summary>
+            <param name="operater">隔离执行的方法</param>
+        </member>
+        <member name="F:xxw.utilities.Core.HslAsyncCoordinator.OperaterStatus">
+            <summary>
+            操作状态，0是未操作，1是操作中
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.HslAsyncCoordinator.Target">
+            <summary>
+            需要操作的次数
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.HslAsyncCoordinator.StartOperaterInfomation">
+            <summary>
+            启动线程池执行隔离方法
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.HslReadWriteLock">
+            <summary>
+            一个高性能的读写锁，支持写锁定，读灵活，读时写锁定，写时读锁定
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.HslReadWriteLock.ToString">
+            <summary>
+            返回本对象的描述字符串
+            </summary>
+            <returns>对象的描述字符串</returns>
+        </member>
+        <member name="M:xxw.utilities.Core.HslReadWriteLock.#ctor">
+            <summary>
+            实例化一个读写锁的对象
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.HslReadWriteLock.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.HslReadWriteLock.Enter(System.Boolean)">
+            <summary>
+            根据读写情况请求锁
+            </summary>
+            <param name="exclusive">True为写请求，False为读请求</param>
+        </member>
+        <member name="M:xxw.utilities.Core.HslReadWriteLock.Leave">
+            <summary>
+            释放锁，将根据锁状态自动区分读写锁
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.SimpleHybirdLock">
+            <summary>
+            一个简单的混合线程同步锁，采用了基元用户加基元内核同步构造实现
+            </summary>
+            <example>
+            以下演示常用的锁的使用方式，还包含了如何优雅的处理异常锁
+            <code lang="cs" source="HslCommunication_Net45.Test\Documentation\Samples\Core\ThreadLock.cs" region="SimpleHybirdLockExample1" title="SimpleHybirdLock示例" />
+            </example>
+        </member>
+        <member name="M:xxw.utilities.Core.SimpleHybirdLock.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SimpleHybirdLock.m_waiters">
+            <summary>
+            基元用户模式构造同步锁
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SimpleHybirdLock.m_waiterLock">
+            <summary>
+            基元内核模式构造同步锁
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.SimpleHybirdLock.Enter">
+            <summary>
+            获取锁
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.SimpleHybirdLock.Leave">
+            <summary>
+            离开锁
+            </summary>
+        </member>
+        <member name="P:xxw.utilities.Core.SimpleHybirdLock.IsWaitting">
+            <summary>
+            获取当前锁是否在等待当中
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.SoftMultiTask`1">
+            <summary>
+            一个用于多线程并发处理数据的模型类，适用于处理数据量非常庞大的情况
+            </summary>
+            <typeparam name="T">等待处理的数据类型</typeparam>
+        </member>
+        <member name="M:xxw.utilities.Core.SoftMultiTask`1.#ctor(`0[],System.Func{`0,System.Boolean},System.Int32)">
+            <summary>
+            实例化一个数据处理对象
+            </summary>
+            <param name="dataList">数据处理列表</param>
+            <param name="operater">数据操作方法，应该是相对耗时的任务</param>
+            <param name="threadCount">需要使用的线程数</param>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_opCount">
+            <summary>
+            操作总数，判定操作是否完成
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_opThreadCount">
+            <summary>
+            判断是否所有的线程是否处理完成
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_threadCount">
+            <summary>
+            准备启动的处理数据的线程数量
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_runStatus">
+            <summary>
+            指示多线程处理是否在运行中，防止冗余调用
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_dataList">
+            <summary>
+            列表数据
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_operater">
+            <summary>
+            需要操作的方法
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.SoftMultiTask`1.MultiInfo">
+            <summary>
+            一个双参数委托
+            </summary>
+            <param name="item"></param>
+            <param name="ex"></param>
+        </member>
+        <member name="T:xxw.utilities.Core.SoftMultiTask`1.MultiInfoTwo">
+            <summary>
+            用于报告进度的委托，当finish等于count时，任务完成
+            </summary>
+            <param name="finish">已完成操作数量</param>
+            <param name="count">总数量</param>
+            <param name="success">成功数量</param>
+            <param name="failed">失败数量</param>
+        </member>
+        <member name="E:xxw.utilities.Core.SoftMultiTask`1.OnExceptionOccur">
+            <summary>
+            异常发生时事件
+            </summary>
+        </member>
+        <member name="E:xxw.utilities.Core.SoftMultiTask`1.OnReportProgress">
+            <summary>
+            报告处理进度时发生
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_finishCount">
+            <summary>
+            已处理完成数量，无论是否异常
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_successCount">
+            <summary>
+            处理完成并实现操作数量
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_failedCount">
+            <summary>
+            处理过程中异常数量
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.HybirdLock">
+            <summary>
+            用于触发事件的混合线程锁
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_isRunningStop">
+            <summary>
+            指示处理状态是否为暂停状态
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_isQuit">
+            <summary>
+            指示系统是否需要强制退出
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.SoftMultiTask`1.m_isQuitAfterException">
+            <summary>
+            在发生错误的时候是否强制退出后续的操作
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.SoftMultiTask`1.StartOperater">
+            <summary>
+            启动多线程进行数据处理
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.SoftMultiTask`1.StopOperater">
+            <summary>
+            暂停当前的操作
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.SoftMultiTask`1.ResumeOperater">
+            <summary>
+            恢复暂停的操作
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.SoftMultiTask`1.EndedOperater">
+            <summary>
+            直接手动强制结束操作
+            </summary>
+        </member>
+        <member name="P:xxw.utilities.Core.SoftMultiTask`1.IsQuitAfterException">
+            <summary>
+            在发生错误的时候是否强制退出后续的操作
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.Singleton">
+            <summary>
+            一个双检锁的示例，适合一些占内存的静态数据对象，获取的时候才实例化真正的对象
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Core.AdvancedHybirdLock">
+            <summary>
+            一个高级的混合线程同步锁，采用了基元用户加基元内核同步构造实现，并包含了自旋和线程所有权
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.AdvancedHybirdLock.Dispose">
+            <summary>
+            释放资源
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.AdvancedHybirdLock.m_waiters">
+            <summary>
+            基元用户模式构造同步锁
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.AdvancedHybirdLock.m_waiterLock">
+            <summary>
+            基元内核模式构造同步锁
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.AdvancedHybirdLock.m_spincount">
+            <summary>
+            控制自旋的一个字段
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.AdvancedHybirdLock.m_owningThreadId">
+            <summary>
+            指出哪个线程拥有锁
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Core.AdvancedHybirdLock.m_recursion">
+            <summary>
+            指示锁拥有了多少次
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.AdvancedHybirdLock.Enter">
+            <summary>
+            获取锁
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Core.AdvancedHybirdLock.Leave">
+            <summary>
+            离开锁
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.JsonHelper.ToJson(System.Object,System.Boolean)">
+            <summary>
+            转换为JSON
+            </summary>
+            <param name="obj"></param>
+            <param name="noNull">是否过滤Null值</param>
+            <returns></returns>
+        </member>
+        <member name="M:xxw.utilities.JsonHelper.ToEntity``1(System.String)">
+            <summary>
+            json转对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="json"></param>
+            <returns></returns>
+        </member>
+        <member name="T:xxw.utilities.Security.DesEncrypt">
+            <summary>
+            加密、解密帮助类
+            版本：2.0
+            <author>
+            	<name>陈少俊</name>
+            	<date>2013.09.27</date>
+            </author>
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Security.DesEncrypt.Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="text">待加密的字符串</param>
+            <returns>加密成功返回加密后的字符串，失败返回源串</returns>
+        </member>
+        <member name="M:xxw.utilities.Security.DesEncrypt.Encrypt(System.String,System.String)">
+            <summary> 
+            加密数据 
+            </summary> 
+            <param name="encryptString">待加密的字符串</param> 
+            <param name="sKey">加密密钥,要求为16位</param> 
+            <returns>加密成功返回加密后的字符串，失败返回源串</returns> 
+        </member>
+        <member name="M:xxw.utilities.Security.DesEncrypt.Encrypt(System.Byte[],System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="encryptByte"></param>
+            <param name="sKey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:xxw.utilities.Security.DesEncrypt.Decrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="text">待解密的字符串</param>
+            <returns>解密成功返回解密后的字符串，失败返源串</returns>
+        </member>
+        <member name="M:xxw.utilities.Security.DesEncrypt.Decrypt(System.String,System.String)">
+            <summary> 
+            解密数据 
+            </summary> 
+            <param name="decryptString">待解密的字符串</param> 
+            <param name="decryptKey">解密密钥,要求为16位,和加密密钥相同</param> 
+            <returns>解密成功返回解密后的字符串，失败返源串</returns> 
+        </member>
+        <member name="T:xxw.utilities.Security.Md5">
+            <summary>
+            MD5加密帮助类
+            版本：2.0
+            <author>
+            	<name>陈少俊</name>
+            	<date>2013.09.27</date>
+            </author>
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Security.Md5.ToMd5(System.String,System.Int32)">
+            <summary>
+            MD5加密
+            </summary>
+            <param name="str">加密字符</param>
+            <param name="code">加密位数16/32</param>
+            <returns></returns>
+        </member>
+        <member name="M:xxw.utilities.Security.Md5.ToPassword(System.String,System.String)">
+            <summary>
+            密码再加密
+            </summary>
+            <param name="password"></param>
+            <param name="secretkey"></param>
+            <returns></returns>
+        </member>
+        <member name="M:xxw.utilities.Security.Md5.Secretkey(System.String)">
+            <summary>
+            获取安全码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:xxw.utilities.Tools.SendKey">
+            <summary>
+            模拟键盘
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Tools.SendKey.Send(System.String)">
+            <summary>
+            发送模拟键盘
+            </summary>
+            <param name="Message">发送的消息</param>
+        </member>
+        <member name="M:xxw.utilities.Tools.SendKey.Send(System.Byte,System.Boolean)">
+            <summary>
+            发送模拟键盘
+            </summary>
+            <param name="vkey">键位</param>
+            <param name="isDown">是否按下</param>
+        </member>
+        <member name="M:xxw.utilities.Tools.SendKey.Send">
+            <summary>
+            发送Ctrl+v粘贴命令
+            </summary>
+        </member>
+        <member name="M:xxw.utilities.Tools.SendKey.Send(xxw.utilities.Tools.EndType,System.String)">
+            <summary>
+            发送结束符
+            </summary>
+            <param name="endType"></param>
+            <param name="customerEndStr"></param>
+        </member>
+        <member name="M:xxw.utilities.Tools.SendKey.ToEndType(System.String)">
+            <summary>
+            转 EndType
+            </summary>
+            <param name="end"></param>
+            <returns></returns>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyLButton">
+            <summary>
+            鼠标左键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyRButton">
+            <summary>
+            鼠标右键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyCancel">
+            <summary>
+            CANCEL 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyMButton">
+            <summary>
+            鼠标中键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyBack">
+            <summary>
+            BACKSPACE 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyTab">
+            <summary>
+            TAB 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyClear">
+            <summary>
+            CLEAR 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyReturn">
+            <summary>
+            ENTER 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyShift">
+            <summary>
+            SHIFT 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyControl">
+            <summary>
+            CTRL 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyAlt">
+            <summary>
+            Alt 键  (键码18)
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyMenu">
+            <summary>
+            MENU 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyPause">
+            <summary>
+            PAUSE 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyCapital">
+            <summary>
+            CAPS LOCK 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyEscape">
+            <summary>
+            ESC 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeySpace">
+            <summary>
+            SPACEBAR 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyPageUp">
+            <summary>
+            PAGE UP 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyEnd">
+            <summary>
+            End 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyHome">
+            <summary>
+            HOME 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyLeft">
+            <summary>
+            LEFT ARROW 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyUp">
+            <summary>
+            UP ARROW 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyRight">
+            <summary>
+            RIGHT ARROW 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyDown">
+            <summary>
+            DOWN ARROW 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeySelect">
+            <summary>
+            Select 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyPrint">
+            <summary>
+            PRINT SCREEN 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyExecute">
+            <summary>
+            EXECUTE 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeySnapshot">
+            <summary>
+            SNAPSHOT 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyDelete">
+            <summary>
+            Delete 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyHelp">
+            <summary>
+            HELP 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumlock">
+            <summary>
+            NUM LOCK 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyA">
+            <summary>
+            A
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyB">
+            <summary>
+            B
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyC">
+            <summary>
+            C
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyD">
+            <summary>
+            D
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyE">
+            <summary>
+            E
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF">
+            <summary>
+            F
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyG">
+            <summary>
+            G
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyH">
+            <summary>
+            H
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyI">
+            <summary>
+            I
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyJ">
+            <summary>
+            J
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyK">
+            <summary>
+            K
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyL">
+            <summary>
+            L
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyM">
+            <summary>
+            M
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyN">
+            <summary>
+            N
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyO">
+            <summary>
+            O
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyP">
+            <summary>
+            P
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyQ">
+            <summary>
+            Q
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyR">
+            <summary>
+            R
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyS">
+            <summary>
+            S
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyT">
+            <summary>
+            T
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyU">
+            <summary>
+            U
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyV">
+            <summary>
+            V
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyW">
+            <summary>
+            W
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyX">
+            <summary>
+            X
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyY">
+            <summary>
+            Y
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyZ">
+            <summary>
+            Z
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey0">
+            <summary>
+            数字键盘 0 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey1">
+            <summary>
+            数字键盘 1 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey2">
+            <summary>
+            数字键盘 2 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey3">
+            <summary>
+            数字键盘 3 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey4">
+            <summary>
+            数字键盘 4 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey5">
+            <summary>
+            数字键盘 5 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey6">
+            <summary>
+            数字键盘 6 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey7">
+            <summary>
+            数字键盘 7 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey8">
+            <summary>
+            数字键盘 8 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKey9">
+            <summary>
+            数字键盘 9 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad0">
+            <summary>
+            小键盘 0 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad1">
+            <summary>
+            小键盘 1 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad2">
+            <summary>
+            小键盘 2 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad3">
+            <summary>
+            小键盘 3 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad4">
+            <summary>
+            小键盘 4 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad5">
+            <summary>
+            小键盘 5 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad6">
+            <summary>
+            小键盘 6 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad7">
+            <summary>
+            小键盘 7 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad8">
+            <summary>
+            小键盘 8 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyNumpad9">
+            <summary>
+            小键盘 9 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyMultiply">
+            <summary>
+            MULTIPLICATIONSIGN(*)键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyAdd">
+            <summary>
+            PLUS SIGN(+) 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeySeparator">
+            <summary>
+            ENTER 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeySubtract">
+            <summary>
+            MINUS SIGN(-) 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyDecimal">
+            <summary>
+            DECIMAL POINT(.) 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyDivide">
+            <summary>
+            DIVISION SIGN(/) 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF1">
+            <summary>
+            F1 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF2">
+            <summary>
+            F2 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF3">
+            <summary>
+            F3 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF4">
+            <summary>
+            F4 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF5">
+            <summary>
+            F5 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF6">
+            <summary>
+            F6 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF7">
+            <summary>
+            F7 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF8">
+            <summary>
+            F8 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF9">
+            <summary>
+            F9 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF10">
+            <summary>
+            F10 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF11">
+            <summary>
+            F11 键
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.SendKey.vbKeyF12">
+            <summary>
+            F12 键
+            </summary>
+        </member>
+        <member name="T:xxw.utilities.Tools.EndType">
+            <summary>
+            结束符
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.EndType.Enter">
+            <summary>
+            回车
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.EndType.NewLine">
+            <summary>
+            换行
+            </summary>
+        </member>
+        <member name="F:xxw.utilities.Tools.EndType.Custom">
+            <summary>
+            自定义
+            </summary>
+        </member>
+    </members>
+</doc>

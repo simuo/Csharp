@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>xxw.Config</name>
+    </assembly>
+    <members>
+        <member name="T:xxw.Config.ConfigHelper">
+            <summary>
+            配置信息帮助类
+            </summary>
+        </member>
+        <member name="M:xxw.Config.ConfigHelper.Init">
+            <summary>
+            初始化配置文件信息 默认配置文件 config.json
+            </summary>
+        </member>
+        <member name="M:xxw.Config.ConfigHelper.Init(System.String)">
+            <summary>
+            初始化配置文件信息
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="M:xxw.Config.ConfigHelper.GetConfig``1(System.String)">
+            <summary>
+            读取配置文件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:xxw.Config.ConfigHelper.GetConfig``1">
+            <summary>
+            读取配置文件
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="M:xxw.Config.ConfigHelper.Update``1(``0)">
+            <summary>
+            更新配置
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="configModel"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

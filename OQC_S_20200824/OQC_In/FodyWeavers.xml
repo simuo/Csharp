@@ -1,0 +1,12 @@
+﻿<Weavers xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="FodyWeavers.xsd">
+  <Costura>
+    <Unmanaged32Assemblies>
+      USB-Dask
+      UsbThermo
+    </Unmanaged32Assemblies>
+    <Unmanaged64Assemblies>
+      USB-Dask
+      UsbThermo
+    </Unmanaged64Assemblies>
+  </Costura>
+</Weavers>

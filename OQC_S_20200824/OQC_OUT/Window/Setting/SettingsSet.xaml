@@ -1,0 +1,53 @@
+﻿<Window x:Class="OQC_OUT.SettingsSet"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OQC_OUT"
+        mc:Ignorable="d"
+        Title="参数设置" Height="385.915" Width="328.023" Icon="/OQC_OUT;component/logo.png" ShowInTaskbar="False" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+    <Window.Resources>
+        <local:SettingsListConver x:Key="SettingsListConver"/>
+    </Window.Resources>
+    <StackPanel Margin="15">
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="线体号：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=StationId}" Text="{Binding SettingsModel.StationId}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="产品颜色：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=Color}" Text="{Binding SettingsModel.Color}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="国别：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=Region}" Text="{Binding SettingsModel.Region}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="专案：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=Project}" Text="{Binding SettingsModel.Project}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="楼栋：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=Location}" Text="{Binding SettingsModel.Location}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="生产阶段：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=Pahse}" Text="{Binding SettingsModel.Pahse}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="工程代码：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=EngineeringCode}" Text="{Binding SettingsModel.EngineeringCode}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,0,0,10">
+            <TextBlock Text="班别码：" VerticalAlignment="Center" TextAlignment="Right" Margin="0,0,10,0" Width="70"/>
+            <ComboBox ItemsSource="{Binding Settings,Converter={StaticResource SettingsListConver},ConverterParameter=ShiftCode}" Text="{Binding SettingsModel.ShiftCode}" Height="23" IsEditable="True" Width="200"/>
+        </StackPanel>
+        <StackPanel>
+            <Button Content="保存参数" Height="23" Command="{Binding SaveCommand}"/>
+        </StackPanel>
+        <StackPanel Margin="0,10,0,0" Visibility="{Binding AdminVisibility}">
+            <Button Content="清除参数设置" Background="DarkRed" Foreground="White" Height="23" Command="{Binding DeleteCommand}"/>
+        </StackPanel>
+    </StackPanel>
+
+</Window>

@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="dataup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="stationid" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins1code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins2code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins3code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins4code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins5code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins6code" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins1name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins2name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins3name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins4name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins5name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ins6name" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="clor" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="region" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="project" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="location" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pahse" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="dataupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="dataupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="historyup">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="events" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="incoming" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="historyupResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="historyupResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInspetorInfo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="InspectorID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetInspetorInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetInspetorInfoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="dataupSoapIn">
+    <wsdl:part name="parameters" element="tns:dataup" />
+  </wsdl:message>
+  <wsdl:message name="dataupSoapOut">
+    <wsdl:part name="parameters" element="tns:dataupResponse" />
+  </wsdl:message>
+  <wsdl:message name="historyupSoapIn">
+    <wsdl:part name="parameters" element="tns:historyup" />
+  </wsdl:message>
+  <wsdl:message name="historyupSoapOut">
+    <wsdl:part name="parameters" element="tns:historyupResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetInspetorInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetInspetorInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetInspetorInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetInspetorInfoResponse" />
+  </wsdl:message>
+  <wsdl:portType name="oqcsiSoap">
+    <wsdl:operation name="dataup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">1.上传数据调用此接口;2.上传IFS接口</wsdl:documentation>
+      <wsdl:input message="tns:dataupSoapIn" />
+      <wsdl:output message="tns:dataupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="historyup">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">上传日志调用此接口</wsdl:documentation>
+      <wsdl:input message="tns:historyupSoapIn" />
+      <wsdl:output message="tns:historyupSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInspetorInfo">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">获取员工讯息调用此接口</wsdl:documentation>
+      <wsdl:input message="tns:GetInspetorInfoSoapIn" />
+      <wsdl:output message="tns:GetInspetorInfoSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="oqcsiSoap" type="tns:oqcsiSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dataup">
+      <soap:operation soapAction="http://tempuri.org/dataup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="historyup">
+      <soap:operation soapAction="http://tempuri.org/historyup" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInspetorInfo">
+      <soap:operation soapAction="http://tempuri.org/GetInspetorInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="oqcsiSoap12" type="tns:oqcsiSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="dataup">
+      <soap12:operation soapAction="http://tempuri.org/dataup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="historyup">
+      <soap12:operation soapAction="http://tempuri.org/historyup" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInspetorInfo">
+      <soap12:operation soapAction="http://tempuri.org/GetInspetorInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="oqcsi">
+    <wsdl:port name="oqcsiSoap" binding="tns:oqcsiSoap">
+      <soap:address location="http://10.128.19.168:1111/oqcsi.asmx" />
+    </wsdl:port>
+    <wsdl:port name="oqcsiSoap12" binding="tns:oqcsiSoap12">
+      <soap12:address location="http://10.128.19.168:1111/oqcsi.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,22 @@
+﻿<Window x:Class="OQC_OUT.DatasExport"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OQC_OUT"
+        mc:Ignorable="d"
+        Title="数据导出" Height="173.815" Width="270.023" Icon="/OQC_OUT;component/logo.png" ResizeMode="NoResize" SizeToContent="WidthAndHeight" WindowStartupLocation="CenterOwner">
+    <StackPanel Margin="20">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextAlignment="Right" Width="70" TextWrapping="Wrap" Text="开始时间：" VerticalAlignment="Center"/>
+            <DatePicker Text="{Binding StartDate,Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="150"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+            <TextBlock HorizontalAlignment="Left" Margin="0,0,0,0" TextAlignment="Right" Width="70" TextWrapping="Wrap" Text="结束时间：" VerticalAlignment="Center"/>
+            <DatePicker Text="{Binding EndDate,Mode=TwoWay}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Width="150"/>
+        </StackPanel>
+        <StackPanel Margin="0,20,0,0">
+            <Button Content="{Binding BtnText}" IsEnabled="{Binding BtnEnable}" Command="{Binding ExportCommand}" HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Height="26" />
+        </StackPanel>
+    </StackPanel>
+</Window>

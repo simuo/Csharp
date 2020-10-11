@@ -10,3 +10,9 @@ E:\Learning\c#\Project\Csharp\01HelloWorldApplication\HelloWorldApplication\obj\
 E:\Learning\c#\Project\Csharp\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.csproj.CoreCompileInputs.cache
 E:\Learning\c#\Project\Csharp\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.exe
 E:\Learning\c#\Project\Csharp\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.pdb
+E:\Learning\c#\Project\01HelloWorldApplication\HelloWorldApplication\bin\Debug\HelloWorldApplication.exe
+E:\Learning\c#\Project\01HelloWorldApplication\HelloWorldApplication\bin\Debug\HelloWorldApplication.pdb
+E:\Learning\c#\Project\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.csprojAssemblyReference.cache
+E:\Learning\c#\Project\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.exe
+E:\Learning\c#\Project\01HelloWorldApplication\HelloWorldApplication\obj\Debug\HelloWorldApplication.pdb

@@ -1,0 +1,12 @@
+E:\Learning\c#\Project\MyExample\bin\Debug\netcoreapp3.1\MyExample.exe
+E:\Learning\c#\Project\MyExample\bin\Debug\netcoreapp3.1\MyExample.deps.json
+E:\Learning\c#\Project\MyExample\bin\Debug\netcoreapp3.1\MyExample.runtimeconfig.json
+E:\Learning\c#\Project\MyExample\bin\Debug\netcoreapp3.1\MyExample.runtimeconfig.dev.json
+E:\Learning\c#\Project\MyExample\bin\Debug\netcoreapp3.1\MyExample.dll
+E:\Learning\c#\Project\MyExample\bin\Debug\netcoreapp3.1\MyExample.pdb
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.AssemblyInfoInputs.cache
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.AssemblyInfo.cs
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.csproj.CoreCompileInputs.cache
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.dll
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.pdb
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.genruntimeconfig.cache

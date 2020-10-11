@@ -1,0 +1,18 @@
+﻿<Window x:Class="OQC_IN.StopWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OQC_IN"
+        mc:Ignorable="d"
+        Title="空闲中..." Height="367.891" Width="493.957" Icon="logo.ico" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterScreen">
+    <StackPanel VerticalAlignment="Center">
+        <TextBlock Text="上次读码时间" HorizontalAlignment="Center" Margin="0,5"/>
+        <TextBlock Text="{Binding StopHelper.LastDateStr}" FontSize="26" FontWeight="Bold" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="停机时长" HorizontalAlignment="Center" Margin="0,5"/>
+        <TextBlock Text="{Binding StopHelper.StopTimeStr}" FontSize="60" FontWeight="Bold" Foreground="#FFD90303" HorizontalAlignment="Center"></TextBlock>
+        <TextBlock Text="停机原因" HorizontalAlignment="Center" Margin="0,5"/>
+        <ComboBox Width="200" Text="请选择停机原因" ItemsSource="{Binding StopMsgs}" SelectedIndex="{Binding StopMsgIndex}"></ComboBox>
+        <Button IsEnabled="{Binding BtnShow}" Command="{Binding SetCommand}" Content="恢复" Width="200" Height="26" Margin="10"/>
+    </StackPanel>
+</Window>

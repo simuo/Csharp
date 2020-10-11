@@ -1,0 +1,151 @@
+ {
+  //启用验证线头入料
+  "CheckIn": false,
+  //读码方向（left、right、top、bottom），注意Group行号调整
+  "Direction": "bottom",
+  //站点别名，依次对应工站号，注意下面DataMapping数量对应
+  "Station": [ "CCD1", "CCD2", "Rcam","BG", "CGHM", "BGHM", "3DHeng" ],
+  "POSTData": {
+    //Process Name 通过Trace系统获取band码时需要
+    "ProcessName": "bd-bc-le",
+    //XML 获取用户信息接口
+    "GetUserUrl": "http://10.128.10.7/messme/GetInspetorInfo?InspectorID={user}",
+    "GetBandType": "trace",
+    //JSON 获取Band码接口
+    //"GetBandUrl": "http://cm:password@17.239.116.110/api/v2/parts?serial_type=fg&serial={serial}&process_name=oqc-in&last_log=true",
+    "GetBandUrl": "http://localhost:56225/api/test/GetSerial",
+    //启用OkToStart
+    "ToOktoStart": false,
+    //获取OkToStart接口
+    "OkToStartUrl": "http://10.128.10.7/Webapi/api/IFactory/OkToStart?Customer=BJS-CTU-Housing&",
+    //ToOktoStart上抛参数
+    "OktoStartParam": "Resource=BJS-E3OQC-Out&Route=BJS-Housing-V1-1&RouteStep=BJS-E3OQC-Out&SerialNumber={sn}&Factory=Metal-OP2-BJS&MaterialName=Metal-BJS-Housing",
+    //启用JGP上抛
+    "ToJGP": false,
+    //XML 上抛JGP接口
+    "JGPUrl": "http://10.128.10.7/messme/dataup2",
+    //启用ProcessControl
+    "ProcessControl": false,
+    //JSON ProcessControl接口
+    //"ProcessControlUrl": "http://localhost:8765/v2/process_control?serial={sn}&serial_type=band",
+    "ProcessControlUrl": "http://localhost:56225/api/test/ProcessControl",
+    //启用IFactory上抛
+    "ToIFactory": false,
+    //JSON IFactory上抛接口
+    "IFactoryUrl": "http://10.128.10.7/webapi/api/ifactory/movewip",
+    //IFactory上抛参数 注意修改Resource=Station
+    "IFactoryParam": "Resource=Boston-E5OQC-Out&Route=Boston-Housing-V1-2&RouteStep=Boston-E5OQC-Out&Customer=Boston-CTU-Housing&Material=Metal-Boston-Housing&SerialNumber={sn}",
+    //上抛SN类型 band-band码，fg-fg码
+    "SnType": "fg",
+    //启用trace上抛
+    "ToTrace": true,
+    //JSON 上抛Trace接口
+    "TeaceUrl": "http://localhost:8765/v2/logs",
+    //启用颜色国别检测
+    "CheckFG": true,
+    //启用机台参数验证
+    "CheckParam": false,
+    //机台参数验证URL  参数中 IP 填写本机IP， Process 填写本机Process
+    "CheckParamUrl": "http://10.128.10.7/messme/checkParam?Ip=&Process="
+  },
+  "Tray": {
+    //料盘长度（mm）
+    "Length": 500,
+    //第一片产品间隔距离（mm）
+    "FirstInterval": 10,
+    //其他产品间隔距离（mm）
+    "OtherInterval": 94,
+    //NG时停机距离(mm)
+    "StopInterval": 150
+  },
+  "Vision": {
+    "IP": "127.0.0.1",
+    "Port": 3000,
+    //视野（mm）
+    "View": 52,
+    //像数（px）
+    "Pixel": 1024
+  },
+  "Trigger": {
+    //触发命令发送次数
+    "CommandSendTimes": 1,
+    //多次发送命令延时时间(ms)
+    "CommandSendDelay": 500,
+    //接收数据超时时间(ms)
+    "ReceiveTimeOut": 1000
+  },
+  "IOCard": {
+    "Enable": true, //启用IO信号控制
+    "CardNo": 0, //IO 板号（凌华7230）
+    "TrayNo": 0, //IO In 接口号
+    "TrayOnDelay": 10, //上升沿滤波时长（ms）
+    "TrayOffDelay": 10, //下降沿滤波时长（ms）
+    "MachineStateNo": 1, //IO In 机台状态接口号
+    "MachineControlNo": 0, //IO Out 控制机台启停接口号
+    "MachineWaringNo": 1, //IO Out 停机报警接口号
+    "MachineStateDelay": 10, //机台状态滤波时长（ms）
+    "MachineStopCompensate": 100, //停机补偿时长（ms）
+    "MachineWaringTime": 500 //停机报警持续时长（ms）
+  },
+  "Group": [
+    { //行1
+      "Row": 2,
+      "CAMNO": [ 1, 2 ],
+      "Command": "jiance 0 {stageId} 1 1 1 1;jiance 1 {stageId} 1 1 1 1"
+    },
+    { //行2
+      "Row": 1,
+      "CAMNO": [ 3, 4 ],
+      "Command": "jiance 2 {stageId} 1 1 1 1;jiance 3 {stageId} 1 1 1 1"
+    }
+  ],
+  "DataMapping": [
+    {
+      "CAMNO": [ 1, 3 ],
+      "Mapping": [
+        {
+          "Name": "fgcode",
+          "Index": 8
+        }
+      ]
+    }
+  ],
+  "TraceData": {
+    "serials": {
+      "fg": ""
+    },
+    "data": {
+      "insight": {
+        "test_attributes": {
+          "test_result": "pass",
+          "unit_serial_number": "",
+          "uut_start": "",
+          "uut_stop": ""
+        },
+       "test_station_attributes": {
+          "line_id": "JACD_E05-2F-OQC01",//"IPGL_C09-3FA",
+          "station_id": "JACD_E05-2F-OQC01_8_TEST6",//"IPGL_C09-3FA-03_1_DEVELOPMENT1",
+          "fixture_id": "N/A",
+          "software_name": "TEST6",
+          "software_version": "V1.2020.7.5"
+        },
+        "uut_attributes": {
+          "STATION_STRING": "JACD",
+          "fg_sn":""
+        },
+        "results": [
+          {
+            "test": "{usernumber}", //Inspector ID 员工号
+            "sub_test": "{usernamepy}", // Inspector Name 员工姓名，必须为拼音
+            "sub_sub_test": "{seatingcode}", //Inspector Seating Code 员工线体座位号
+            "value": "0", // 默认传”0"
+            "units": "{grade}", // Inspector Grade 员工等级(A, B, C)
+            "result": "pass", // 默认传 "pass"
+            "upper_limit": "{onboarddate}", // Inspector Onboard Date 员工入职日期，需要转换格式，如 2020-06-24转化为20200624
+            "lower_limit": "{qualificationdate}" // Inspector Qualification Date 员工上岗日期，格式同上
+          }
+        ]
+      }
+    }
+  }
+}

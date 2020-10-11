@@ -1,0 +1,97 @@
+{
+  "CheckOut": false, //连接线尾出料验证
+  "LineOutIp": "192.168.1.48",
+  "StopDelay": 30, //空闲警告时长（秒） 设为 0 则关闭空闲警告
+  "Vision": {
+    "IP": "127.0.0.1",
+    "Port": 3000
+  },
+  "Trigger": [
+    {
+      "Name": "Left",
+      "Command": "jiance 0 1 1 1 1 1"
+    },
+    {
+      "Name": "Right",
+      "Command": "jiance 1 2 1 1 1 1"
+    }
+  ],
+  "POSTData": {
+    "ProcessControl": true,
+    "ProcessControlUrl": "http://localhost:8765/v2/process_control?serial={sn}&serial_type=band",
+    "SnType": "band", //上抛SN类型 band-band码，fg-fg码
+    "ToTrace": true, //启用trace上抛
+    "TeaceUrl": "http://localhost:8765/v2/logs",
+    "GetBandType": "trace", //条码获取类型：jgp-从JGP获取，trace-从Trace获取
+    //WX
+    "GetBandUrl": "http://cm:password@17.80.194.10/api/v2/parts?serial_type=fg&serial={serial}&process_name=oqc&last_log=true"
+    //CD
+    //"GetBandUrl": "http://cm:password@17.239.116.110/api/v2/parts?serial_type=fg&serial={serial}&process_name=oqc&last_log=true"
+  },
+  "IOCard": {
+    "Enable": true, //启用IO信号控制
+    "CardNo": 0, //IO 板号（凌华7230）
+    "MachineStopEnable": true, //NG停机
+    "MachineStopNo": 2, //IO Out 停机接口号
+    "MachineStopDelay": 500, //停机延时（ms）
+    "Line": [
+      {
+        "TriggerNo": 0, //IO In 触发信号
+        "MachineWaringNo": 0, //IO Out 报警接口号
+        "MachineWaringTime": 500, //停机报警持续时长（ms）
+        "MachineWaringDelay": 500, //停机报警持续时长（ms）
+        "OnDelay": 50, //上升沿滤波时间（ms）
+        "OffDelay": 50 //下降沿滤波时间（ms）
+      },
+      {
+        "TriggerNo": 1, //IO In 触发信号
+        "MachineWaringNo": 1, //IO Out 报警接口号
+        "MachineWaringTime": 500, //停机报警持续时长（ms）
+        "MachineWaringDelay": 500, //停机报警持续时长（ms）
+        "OnDelay": 50, //上升沿滤波时间（ms）
+        "OffDelay": 50 //下降沿滤波时间（ms）
+      }
+    ]
+  },
+  "DataMapping": [
+    {
+      "CAMNO": [ 1, 2 ],
+      "Mapping": [
+        {
+          "Name": "fgcode",
+          "Index": 6
+        }
+      ]
+    }
+  ],
+  "TraceData": {
+    "serials": {
+      "fg": ""
+    },
+    "data": {
+      "items": {
+        "error_1": "",
+        "error_2": ""
+      },
+      "insight": {
+        "test_attributes": {
+          "test_result": "pass",
+          "unit_serial_number": "",
+          "uut_start": "",
+          "uut_stop": ""
+        },
+        "test_station_attributes": {
+          "line_id": "IPGL_C09-3FA",
+          "station_id": "IPGL_C09-3FA-03_1_DEVELOPMENT1",
+          "fixture_id": "H-76HO-SMA40-2200-A-00003",
+          "software_name": "DEVELOPMENT1",
+          "software_version": "V1.111"
+        },
+        "uut_attributes": {
+          "STATION_STRING": "IDK",
+          "fg_sn": ""
+        }
+      }
+    }
+  }
+}
