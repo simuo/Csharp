@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\MyExample\\bin\\Debug\\netcoreapp3.1"
   ],
-  "SelectedNode": "\\DecisionMaking",
+  "SelectedNode": "\\MyExample",
   "PreviewInSolutionExplorer": false
 }

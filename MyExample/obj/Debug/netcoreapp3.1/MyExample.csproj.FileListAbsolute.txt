@@ -10,3 +10,4 @@ E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.csproj.CoreCo
 E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.dll
 E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.pdb
 E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.genruntimeconfig.cache
+E:\Learning\c#\Project\MyExample\obj\Debug\netcoreapp3.1\MyExample.csprojAssemblyReference.cache
